@@ -12,10 +12,6 @@
 
 #include "get_next_line.h"
 
-/*
-** bytes_read = 1 потому что нужно войти в цыкл.
-** Нам нужно читать, пока в buffer нет \n.
-*/
 static char	*get_current_buffer(int fd, char *buffer)
 {
 	char	*current;
@@ -43,18 +39,6 @@ static char	*get_current_buffer(int fd, char *buffer)
 	return (NULL);
 }
 
-/*
-** line         - строка, которую мы вернём пользователю.
-** keep         - остаток, который сохраним для следующего вызова.
-** til_null_len - длина всей строки.
-** til_new      - позиция \n.
-**
-** Ищем \n, потом проверяем, действительно ли там \n. Ф-я возвращает
-** позицию \n, но не включает в себя этот же \n, поэтому til_new++.
-** Создаём line, находим конец всей строки и копируем остаток:
-** til_null_len - til_new нужно, чтобы узнать, сколько символов осталось
-** после \n, чтобы скопировать именно остаток в keep.
-*/
 static char	*get_line(char **buffer)
 {
 	char	*line;
@@ -79,12 +63,6 @@ static char	*get_line(char **buffer)
 	return (line);
 }
 
-/*
-** static-переменная buffer сохраняет своё значение между вызовами
-** функции. Она живёт всё время работы программы, а не удаляется при
-** выходе из функции. Её область видимости при этом ограничена только
-** этой функцией.
-*/
 char	*get_next_line(int fd)
 {
 	static char	*buffer;
