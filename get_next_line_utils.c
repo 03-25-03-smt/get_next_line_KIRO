@@ -12,7 +12,6 @@
 
 #include "get_next_line.h"
 
-/* str lenght */
 size_t	strlen_at(const char *s, int end)
 {
 	size_t	i;
@@ -25,9 +24,6 @@ size_t	strlen_at(const char *s, int end)
 	return (i);
 }
 
-/*
-** looking for specific character, that we are sending for example "/n"
-*/
 char	*find_chr(const char *s, int c)
 {
 	if (!s)
@@ -43,7 +39,6 @@ char	*find_chr(const char *s, int c)
 	return (NULL);
 }
 
-/* копирует одну стр в другую */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*str_ptr;
@@ -61,7 +56,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* копирует ф-ю в новую ф-ю */
 char	*cpy_buffer(const char *buffer, size_t start, size_t len)
 {
 	size_t	num;
@@ -80,7 +74,6 @@ char	*cpy_buffer(const char *buffer, size_t start, size_t len)
 	return (res);
 }
 
-/* соединяет 2 фи-я в одну */
 char	*merge_previous_and_current(char *previous, const char *current)
 {
 	size_t	prev_len;
