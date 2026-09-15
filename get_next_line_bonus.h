@@ -22,7 +22,7 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# define MAX_FILES OPEN_MAX
+# define MAX_FILES 1024
 
 char	*get_next_line(int fd);
 
