@@ -13,11 +13,6 @@
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-/*
-** sys/types.h - системные типы, в частности ssize_t -> это знаковый
-** целочисленный тип, то есть он может хранить и положительные, и
-** отрицательные значения.
-*/
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/types.h>
@@ -27,9 +22,6 @@
 #  define BUFFER_SIZE 42
 # endif
 
-/*
-** Создай моё имя MAX_FILES, которое будет равно системному OPEN_MAX.
-*/
 # define MAX_FILES OPEN_MAX
 
 char	*get_next_line(int fd);
