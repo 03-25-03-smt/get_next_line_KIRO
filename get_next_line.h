@@ -13,11 +13,6 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-/*
-** sys/types.h - системные типы, в частности ssize_t -> это знаковый
-** целочисленный тип, то есть он может хранить и положительные, и
-** отрицательные значения.
-*/
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/types.h>
